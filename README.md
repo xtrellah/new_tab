@@ -1,8 +1,29 @@
-# index
-markdown doc for easy navigation of my projects
+# new_tab
 
-## Projects
-[Counter-Site](https://github.com/Xtrellah?tab=repositories&q=Counter-Site) <br>
-[Darker Screen](https://github.com/Xtrellah?tab=repositories&q=Darker+screen) <br>
-[Roadmapper](https://github.com/Xtrellah?tab=repositories&q=Roadmapper) <br>
-[Counte-Site](https://github.com/Xtrellah?tab=repositories&q=Counter-Site)
+## setup
+
+requires a `links.toml`:
+
+```toml
+# link cards
+
+[[github_links]]
+label = "label"
+href = "https://github.com/username"
+
+[[github_links]]
+label = "TBT2"
+href = "https://github.com/organisation"
+
+# link cards
+
+[[link_cards]]
+label = "label"
+href = ""
+
+[[link_cards]]
+label = "label"
+href = ""
+```
+
+copy that and `vim links.toml`

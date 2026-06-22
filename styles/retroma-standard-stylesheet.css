@@ -1,0 +1,591 @@
+:root {
+    --bg: #181615;
+    --bg-elevated: #221f1d;
+    --panel: #2b2724;
+
+    --text: #e7dcc7;
+    --text-muted: #b6a994;
+
+    --primary: #d8a657;
+    --primary-soft: #8f6b32;
+
+    --accent: #7daea3;
+    --danger: #ea6962;
+    --success: #a9b665;
+
+    --border: #4a433d;
+
+    --code-bg: #141210;
+
+    --shadow: 0 0 0 1px rgba(0, 0, 0, 0.4), 0 10px 30px rgba(0, 0, 0, 0.35);
+
+    --radius: 10px;
+
+    --font-body: "Inter", "Segoe UI", sans-serif;
+    --font-heading: "IBM Plex Serif", Georgia, serif;
+    --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+    --content-width: 780px;
+}
+
+/* =========================================================
+   Base
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 2rem;
+    background: radial-gradient(circle at top, #2a241f 0%, var(--bg) 60%);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.75;
+    font-size: 17px;
+    min-height: 100vh;
+}
+
+/* =========================================================
+   Layout
+   ========================================================= */
+
+main,
+article,
+section,
+header,
+footer,
+nav {
+    width: 100%;
+}
+
+main {
+    max-width: var(--content-width);
+    margin: 0 auto;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* =========================================================
+   Typography
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--primary);
+    line-height: 1.2;
+    margin-top: 2.2em;
+    margin-bottom: 0.7em;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+h1 {
+    font-size: 3rem;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.4rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.7rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+small {
+    color: var(--text-muted);
+}
+
+strong {
+    color: #f3e7ce;
+}
+
+em {
+    color: #d9c6a5;
+}
+
+/* =========================================================
+   Links
+   ========================================================= */
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(125, 174, 163, 0.5);
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: #a8d6cb;
+    border-bottom-color: currentColor;
+}
+
+/* =========================================================
+   Lists
+   ========================================================= */
+
+ul,
+ol {
+    padding-left: 1.6rem;
+}
+
+li {
+    margin: 0.4rem 0;
+}
+
+li::marker {
+    color: var(--primary);
+}
+
+/* =========================================================
+   Blockquotes
+   ========================================================= */
+
+blockquote {
+    margin: 2rem 0;
+    padding: 1rem 1.4rem;
+    background: rgba(216, 166, 87, 0.08);
+    border-left: 4px solid var(--primary);
+    border-radius: var(--radius);
+    color: #f1e2c7;
+}
+
+blockquote p:first-child {
+    margin-top: 0;
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   Code
+   ========================================================= */
+
+code,
+kbd,
+samp {
+    font-family: var(--font-mono);
+}
+
+code {
+    background: rgba(255, 255, 255, 0.06);
+    color: #f6c177;
+    padding: 0.15rem 0.45rem;
+    border-radius: 5px;
+    font-size: 0.95em;
+}
+
+pre {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.2rem;
+    overflow-x: auto;
+    box-shadow: var(--shadow);
+}
+
+pre code {
+    background: transparent;
+    padding: 0;
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+/* =========================================================
+   Horizontal Rule
+   ========================================================= */
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 3rem 0;
+}
+
+/* =========================================================
+   Tables
+   ========================================================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    overflow: hidden;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+th,
+td {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--border);
+    text-align: left;
+}
+
+th {
+    background: var(--panel);
+    color: var(--primary);
+    font-weight: 700;
+}
+
+td {
+    background: var(--bg-elevated);
+}
+
+/* =========================================================
+   Forms
+   ========================================================= */
+
+input,
+textarea,
+select,
+button {
+    font: inherit;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    background: var(--bg-elevated);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: #2f2a26;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+button {
+    display: inline-block;
+    padding: 0.8rem 1.3rem;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--primary);
+    color: #181615;
+    cursor: pointer;
+    font-weight: 700;
+    transition:
+        transform 0.15s ease,
+        background 0.2s ease;
+}
+
+button:hover {
+    background: #e6b96e;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* =========================================================
+   Images
+   ========================================================= */
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    display: block;
+}
+
+figure {
+    margin: 2rem 0;
+}
+
+figcaption {
+    margin-top: 0.6rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* =========================================================
+   Navigation
+   ========================================================= */
+
+nav {
+    margin-bottom: 3rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+nav ul {
+    display: flex;
+    gap: 1.2rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav a {
+    color: var(--text);
+    border: none;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+/* =========================================================
+   Cards / Generic Containers
+   ========================================================= */
+
+section,
+article {
+    margin-bottom: 3rem;
+}
+
+.card,
+aside {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+/* =========================================================
+   Start Page
+   ========================================================= */
+
+.github-section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+
+    margin-bottom: 0;
+}
+
+.github-section a {
+    color: var(--text);
+    background: rgba(216, 166, 87, 0.08);
+    border: 1px solid rgba(216, 166, 87, 0.24);
+    border-bottom: 1px solid rgba(216, 166, 87, 0.24);
+    border-radius: 7px;
+    text-decoration: none;
+
+    padding: 0.55rem 0.8rem;
+
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    line-height: 1.2;
+
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.github-section a:hover {
+    color: #fff7e8;
+    background: rgba(216, 166, 87, 0.16);
+    border-color: rgba(216, 166, 87, 0.48);
+}
+
+.pipe {
+    color: var(--primary-soft);
+    font-family: var(--font-mono);
+}
+
+.search-section {
+    margin-bottom: 0;
+}
+
+.search-section form {
+    margin: 0;
+}
+
+.search-input {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    line-height: 1.4;
+
+    box-shadow:
+        var(--shadow),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.search-input::placeholder {
+    color: var(--text-muted);
+}
+
+.links-section {
+    margin-bottom: 0;
+}
+
+.links-section h2 {
+    margin: 0 0 1.2rem;
+    padding-bottom: 0.65rem;
+
+    border-bottom: 1px solid var(--border);
+
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0;
+}
+
+.link-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.link-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 96px;
+    padding: 1rem;
+
+    background: var(--panel);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-decoration: none;
+
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    text-align: center;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.03),
+        0 5px 16px rgba(0, 0, 0, 0.25);
+}
+
+.link-card:hover {
+    color: #fff7e8;
+    background: #332e29;
+    border-color: rgba(216, 166, 87, 0.45);
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+   Details / Summary
+   ========================================================= */
+
+details {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem 1.2rem;
+    margin: 1rem 0;
+}
+
+summary {
+    cursor: pointer;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* =========================================================
+   Selection
+   ========================================================= */
+
+::selection {
+    background: rgba(216, 166, 87, 0.35);
+    color: #fff7e8;
+}
+
+/* =========================================================
+   Scrollbar
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4f463f;
+    border-radius: 20px;
+    border: 2px solid var(--bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6b5e55;
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 768px) {
+    body {
+        padding: 1.2rem;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    h2 {
+        font-size: 1.9rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}

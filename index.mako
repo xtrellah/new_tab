@@ -1,12 +1,3 @@
-<%!
-    github_links = [
-
-    ]
-
-    link_cards = [
-
-    ]
-%>
 <!doctype html>
 <html lang="en">
     <head>
@@ -57,6 +48,7 @@
                     % endfor
                 </div>
             </section>
+
         </main>
         <script>
             window.addEventListener("load", () => {

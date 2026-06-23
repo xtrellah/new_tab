@@ -12,13 +12,15 @@
     </head>
     <body>
         <main class="container">
-
-            ${github_section.render(github_links)}
-
-            ${search_section.render()}
-
-            ${links_section.render(link_cards)}
-
+            % for component in components:
+                % if component["type"] == "github_section":
+                    ${github_section.render(component["config"])}
+                % elif component["type"] == "search_bar":
+                    ${search_section.render(component["config"])}
+                % elif component["type"] == "card_section":
+                    ${links_section.render(component["config"])}
+                % endif
+            % endfor
         </main>
         <script>
             window.addEventListener("load", () => {

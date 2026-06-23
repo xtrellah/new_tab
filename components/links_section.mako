@@ -1,10 +1,10 @@
-<%def name="render(link_cards)">
+<%def name="render(section)">
 <section class="card links-section">
-    <h2>Links</h2>
+    <h2>${section["title"]}</h2>
 
     <div class="link-grid">
-        % for label, href in link_cards:
-            <a class="link-card" href="${href}">${label}</a>
+        % for item in section["items"]:
+            <a class="link-card" href="${item["href"]}">${item["label"]}</a>
         % endfor
     </div>
 </section>

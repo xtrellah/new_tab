@@ -1,4 +1,7 @@
 <!doctype html>
+<%namespace name="github_section" file="components/github_section.mako" />\
+<%namespace name="search_section" file="components/search_section.mako" />\
+<%namespace name="links_section" file="components/links_section.mako" />\
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -6,48 +9,15 @@
         <title>New Tab</title>
 
         <link rel="stylesheet" href="styles/matrix.css" />
-        <!--<link rel="stylesheet" href="styles/retroma.css" />-->
-        <!--<link rel="stylesheet" href="styles/steam.css" />-->
-        <!--<link rel="stylesheet" href="styles/neo-brutalist.css" />-->
     </head>
     <body>
         <main class="container">
 
-            <!-- TOP BAR -->
-            <section class="card github-section">
-                % for index, (label, href) in enumerate(github_links):
-                    <a href="${href}">${label}</a>
-                    % if index in {0, 2, 3}:
-                        <span class="pipe">|</span>
-                    % endif
-                % endfor
-            </section>
+            ${github_section.render(github_links)}
 
-            <!-- SEARCH BAR -->
-            <section class="search-section">
-                <form action="https://www.google.com/search" method="GET">
-                    <input
-                        type="text"
-                        name="q"
-                        class="search-input"
-                        placeholder="Search (googoo)"
-                        autocomplete="off"
-                        autofocus
-                        required
-                    />
-                </form>
-            </section>
+            ${search_section.render()}
 
-            <!-- LINK GRID -->
-            <section class="card links-section">
-                <h2>Links</h2>
-
-                <div class="link-grid">
-                    % for label, href in link_cards:
-                        <a class="link-card" href="${href}">${label}</a>
-                    % endfor
-                </div>
-            </section>
+            ${links_section.render(link_cards)}
 
         </main>
         <script>

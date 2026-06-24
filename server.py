@@ -2,6 +2,7 @@ import os
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 from urllib.parse import urlparse
 
+from parser import load_config
 from render import render_index
 
 HOST = "localhost"
@@ -19,7 +20,9 @@ class NewTabHandler(SimpleHTTPRequestHandler):
         super().do_GET()
 
     def render_index(self):
-        body = render_index().encode("utf-8")
+        tab_config = load_config()
+
+        body = render_index(tab_config).encode("utf-8")
 
         self.send_response(200)
         self.send_header("Content-Type", "text/html; charset=utf-8")
@@ -30,8 +33,8 @@ class NewTabHandler(SimpleHTTPRequestHandler):
 
 def main():
     server = HTTPServer((HOST, PORT), NewTabHandler)
-
     print(f"Serving at http://{HOST}:{PORT}")
+
     server.serve_forever()
 
 

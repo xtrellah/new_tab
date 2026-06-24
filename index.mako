@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>New Tab</title>
 
-        <link rel="stylesheet" href="styles/matrix.css" />
+        <link rel="stylesheet" href="styles/default.css" />
+        <link rel="stylesheet" href="styles/steam.css" />
     </head>
     <body>
         <main class="container">

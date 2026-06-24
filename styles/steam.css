@@ -17,7 +17,6 @@
 }
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -34,17 +33,12 @@ body {
 
     font-family: "Segoe UI", Arial, sans-serif;
 
-    min-height: 100vh;
-
     padding: 48px;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-
-    display: flex;
-    flex-direction: column;
     gap: 24px;
 }
 
@@ -70,17 +64,7 @@ body {
 
 /* SEARCH */
 
-.search-section {
-    width: 100%;
-}
-
-.search-section form {
-    margin: 0;
-}
-
 .search-input {
-    width: 100%;
-
     color: var(--text);
 
     background:
@@ -97,8 +81,6 @@ body {
 
     font: inherit;
     font-size: 1rem;
-
-    outline: none;
 
     box-shadow:
         var(--shadow),
@@ -132,15 +114,10 @@ body {
 /* TOP LINKS */
 
 .github-section {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
     gap: 14px;
 }
 
 .github-section a {
-    text-decoration: none;
-
     color: var(--text);
 
     background: linear-gradient(180deg, #417a9b 0%, #2f5f7b 100%);
@@ -198,18 +175,12 @@ body {
 /* GRID */
 
 .link-grid {
-    display: grid;
-
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-
     gap: 18px;
 }
 
 /* LINK CARDS */
 
 .link-card {
-    text-decoration: none;
-
     color: var(--text);
 
     background:
@@ -225,12 +196,6 @@ body {
     min-height: 100px;
 
     padding: 20px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
 
     font-weight: 600;
     font-size: 1rem;
@@ -269,19 +234,5 @@ body {
 @media (max-width: 700px) {
     body {
         padding: 20px;
-    }
-
-    .github-section {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .github-section a {
-        width: 100%;
-        text-align: center;
-    }
-
-    .pipe {
-        display: none;
     }
 }

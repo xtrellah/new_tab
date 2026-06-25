@@ -9,25 +9,19 @@
     --text: #e7e2d9;
     --muted: #a7a094;
 
-    /*--accent: #7aa2f7;*/
-    --accent: #9ece6a;
-    --accent-2: #9ece6a;
+    --accent: #a7a094;
+    --accent-2: #f7931f;
 
-    /*--shadow: rgba(0, 0, 0, 0.45);*/
-    --shadow: #9ece6a;
+    --shadow: #f7931f;
 
     --radius: 6px;
     --transition: 120ms ease;
 }
 
-/* =========================================
-   BASE
-   ========================================= */
+/* BASE */
 
 body {
     background: linear-gradient(180deg, #1b1b1b 0%, #141414 100%);
-
-    color: var(--text);
 
     font-family: "JetBrains Mono", "IBM Plex Mono", monospace;
 
@@ -40,18 +34,12 @@ body {
     padding: 4rem 1.5rem;
 }
 
-/* =========================================
-   LAYOUT
-   ========================================= */
-
-.container {
+main {
     max-width: 900px;
     gap: 2rem;
 }
 
-/* =========================================
-   RETROMA CARD
-   ========================================= */
+/* CARD */
 
 .card {
     position: relative;
@@ -85,9 +73,7 @@ body {
         10px 10px 0 var(--shadow);
 }
 
-/* =========================================
-   SEARCH
-   ========================================= */
+/* SEARCH */
 
 .search-input {
     background: linear-gradient(180deg, #303030 0%, #262626 100%);
@@ -101,7 +87,6 @@ body {
 
     padding: 1rem 1.1rem;
 
-    font: inherit;
     letter-spacing: 0;
 
     box-shadow:
@@ -129,9 +114,7 @@ body {
     transform: translate(-1px, -1px);
 }
 
-/* =========================================
-   TOP LINKS
-   ========================================= */
+/* TOP BAR */
 
 .github-section {
     gap: 0.75rem;
@@ -158,9 +141,7 @@ body {
     color: #5e5e5e;
 }
 
-/* =========================================
-   SECTION
-   ========================================= */
+/* SECTION TITLE */
 
 .links-section h2 {
     margin-top: 0;
@@ -176,24 +157,18 @@ body {
     padding-bottom: 0.75rem;
 }
 
-/* =========================================
-   GRID
-   ========================================= */
+/* LINK GRID */
 
 .link-grid {
     gap: 1rem;
 }
 
-/* =========================================
-   LINK CARDS
-   ========================================= */
+/* LINK CARDS */
 
 .link-card {
     min-height: 100px;
 
     background: linear-gradient(180deg, #303030 0%, #262626 100%);
-
-    color: var(--text);
 
     border: 2px solid var(--border-dark);
 
@@ -236,18 +211,14 @@ body {
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.35);
 }
 
-/* =========================================
-   SELECTION
-   ========================================= */
+/* SELECTION */
 
 ::selection {
     background: var(--accent);
     color: #111;
 }
 
-/* =========================================
-   SCROLLBAR
-   ========================================= */
+/* SCROLLBAR */
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -264,22 +235,4 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #666;
-}
-
-/* =========================================
-   RESPONSIVE
-   ========================================= */
-
-@media (max-width: 640px) {
-    body {
-        padding: 2rem 1rem;
-    }
-
-    .card {
-        padding: 1rem;
-    }
-
-    .link-card {
-        min-height: 80px;
-    }
 }

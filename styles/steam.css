@@ -16,10 +16,7 @@
         0 0 0 1px rgba(255, 255, 255, 0.03), 0 8px 24px rgba(0, 0, 0, 0.45);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
+/* BASE */
 
 body {
     background: radial-gradient(
@@ -29,20 +26,17 @@ body {
         #171a21 100%
     );
 
-    color: var(--text);
-
     font-family: "Segoe UI", Arial, sans-serif;
 
     padding: 48px;
 }
 
-.container {
+main {
     max-width: 1200px;
-    margin: 0 auto;
     gap: 24px;
 }
 
-/* SHARED CARD */
+/* CARD */
 
 .card {
     background:
@@ -65,8 +59,6 @@ body {
 /* SEARCH */
 
 .search-input {
-    color: var(--text);
-
     background:
         linear-gradient(
             180deg,
@@ -79,7 +71,6 @@ body {
 
     padding: 14px 16px;
 
-    font: inherit;
     font-size: 1rem;
 
     box-shadow:
@@ -90,10 +81,6 @@ body {
         border-color 0.15s ease,
         box-shadow 0.15s ease,
         background 0.15s ease;
-}
-
-.search-input::placeholder {
-    color: var(--text-muted);
 }
 
 .search-input:focus {
@@ -111,11 +98,7 @@ body {
         0 0 0 1px rgba(102, 192, 244, 0.18);
 }
 
-/* TOP LINKS */
-
-.github-section {
-    gap: 14px;
-}
+/* TOP BAR */
 
 .github-section a {
     color: var(--text);
@@ -172,17 +155,9 @@ body {
     letter-spacing: 1px;
 }
 
-/* GRID */
-
-.link-grid {
-    gap: 18px;
-}
-
 /* LINK CARDS */
 
 .link-card {
-    color: var(--text);
-
     background:
         linear-gradient(
             180deg,
@@ -227,12 +202,4 @@ body {
     transform: translateY(-2px);
 
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
-}
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-    body {
-        padding: 20px;
-    }
 }

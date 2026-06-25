@@ -1,4 +1,70 @@
 /* =========================================
+   ROOT — default values (override in theme)
+   ========================================= */
+
+:root {
+    /* Backgrounds */
+    --bg: #ffffff;
+    --bg-elevated: #f5f5f5;
+    --bg-secondary: #f0f0f0;
+    --bg-dark: #e0e0e0;
+
+    /* Surfaces / cards */
+    --surface: #f8f8f8;
+    --surface-2: #f0f0f0;
+    --panel: #eeeeee;
+    --card: #ffffff;
+    --card-light: #fafafa;
+
+    /* Text */
+    --text: #1a1a1a;
+    --text-muted: #666666;
+    --muted: #666666;
+
+    /* Accent */
+    --accent: #0066cc;
+    --accent-bright: #3399ff;
+    --accent-dim: #004499;
+    --accent-hover: #3399ff;
+    --accent-2: #cc6600;
+
+    /* Primary (alias used by some themes) */
+    --primary: #0066cc;
+    --primary-soft: #004499;
+
+    /* Borders */
+    --border: #dddddd;
+    --border-bright: #aaaaaa;
+    --border-dark: #bbbbbb;
+    --border-light: #cccccc;
+
+    /* Status */
+    --danger: #cc3333;
+    --success: #33aa33;
+
+    /* Effects */
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(0, 0, 0, 0.2);
+    --glow: none;
+    --code-bg: #f4f4f4;
+
+    /* Shape */
+    --radius: 8px;
+    --radius-small: 6px;
+
+    /* Layout */
+    --content-width: 1200px;
+
+    /* Motion */
+    --transition: 150ms ease;
+
+    /* Typography */
+    --font-body: system-ui, -apple-system, sans-serif;
+    --font-heading: system-ui, -apple-system, sans-serif;
+    --font-mono: ui-monospace, monospace;
+}
+
+/* =========================================
    BOX MODEL
    ========================================= */
 
@@ -6,6 +72,8 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /* =========================================
@@ -14,16 +82,19 @@
 
 html,
 body {
-    margin: 0;
-    padding: 0;
     min-height: 100vh;
 }
 
-/* CONTAINER / MAIN */
-.container {
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+main {
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
 }
 
 /* =========================================
@@ -33,27 +104,11 @@ body {
 .github-section {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 14px;
 }
 
 .github-section a {
     text-decoration: none;
-}
-
-@media (max-width: 700px) {
-    .github-section {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .github-section a {
-        width: 100%;
-        text-align: center;
-    }
-
-    .pipe {
-        display: none;
-    }
 }
 
 /* =========================================
@@ -71,6 +126,11 @@ body {
 .search-input {
     width: 100%;
     outline: none;
+    font: inherit;
+}
+
+.search-input::placeholder {
+    color: var(--text-muted);
 }
 
 /* =========================================
@@ -80,6 +140,7 @@ body {
 .link-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
 }
 
 .link-card {
@@ -88,11 +149,6 @@ body {
     justify-content: center;
     text-align: center;
     text-decoration: none;
+    color: var(--text);
     min-height: 90px;
-}
-
-@media (max-width: 700px) {
-    .link-grid {
-        grid-template-columns: 1fr;
-    }
 }

@@ -24,9 +24,7 @@
     --transition: 140ms ease;
 }
 
-/* =========================================
-   BASE
-========================================= */
+/* BASE */
 
 body {
     padding: 48px 24px;
@@ -38,8 +36,6 @@ body {
             transparent 40%
         ),
         linear-gradient(to bottom, #0d100e, #121512);
-
-    color: var(--text);
 
     font-family: "JetBrains Mono", "Fira Code", "IBM Plex Mono", monospace;
 
@@ -69,18 +65,12 @@ body::before {
     opacity: 0.25;
 }
 
-/* =========================================
-   LAYOUT
-========================================= */
-
-.container {
+main {
     max-width: 860px;
     gap: 28px;
 }
 
-/* =========================================
-   MATRIX CARD
-========================================= */
+/* MATRIX CARD */
 
 .card {
     position: relative;
@@ -117,18 +107,14 @@ body::before {
     pointer-events: none;
 }
 
-/* =========================================
-    SEARCH SECTION
-========================================= */
+/* SEARCH SECTION */
 
 .search-section {
-    /*max-width: 500px;*/
     padding: 20px;
 }
 
 .search-input {
     padding: 12px 16px;
-    /* stolen from */
     background: linear-gradient(
         145deg,
         rgba(255, 255, 255, 0.02),
@@ -145,13 +131,7 @@ body::before {
     border-color: var(--accent-bright);
 }
 
-/* =========================================
-   TOP BAR
-========================================= */
-
-.github-section {
-    gap: 14px;
-}
+/* TOP BAR */
 
 .github-section a {
     color: var(--text-muted);
@@ -183,9 +163,7 @@ body::before {
     opacity: 0.7;
 }
 
-/* =========================================
-   SECTION TITLE
-========================================= */
+/* SECTION TITLE */
 
 .links-section h2 {
     margin: 0 0 22px;
@@ -209,17 +187,7 @@ body::before {
     font-size: 0.9rem;
 }
 
-/* =========================================
-   LINK GRID
-========================================= */
-
-.link-grid {
-    gap: 18px;
-}
-
-/* =========================================
-   LINK CARDS
-========================================= */
+/* LINK CARDS */
 
 .link-card {
     position: relative;
@@ -237,8 +205,6 @@ body::before {
     border: 1px solid rgba(111, 138, 114, 0.35);
 
     border-radius: var(--radius-small);
-
-    color: var(--text);
 
     font-size: 0.95rem;
     letter-spacing: 0.03em;
@@ -294,27 +260,21 @@ body::before {
         inset 0 0 0 1px rgba(184, 233, 148, 0.08);
 }
 
-/* =========================================
-   ACTIVE CLICK FEEDBACK
-========================================= */
+/* ACTIVE CLICK FEEDBACK */
 
 .link-card:active,
 .github-section a:active {
     transform: translateY(1px);
 }
 
-/* =========================================
-   SELECTION
-========================================= */
+/* SELECTION */
 
 ::selection {
     background: rgba(152, 195, 121, 0.35);
     color: white;
 }
 
-/* =========================================
-   SCROLLBAR
-========================================= */
+/* SCROLLBAR */
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -331,22 +291,4 @@ body::before {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #445548;
-}
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 640px) {
-    body {
-        padding: 24px 16px;
-    }
-
-    .card {
-        padding: 18px;
-    }
-
-    .github-section {
-        gap: 8px;
-    }
 }

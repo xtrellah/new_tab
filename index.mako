@@ -9,10 +9,10 @@
         <title>New Tab</title>
 
         <link rel="stylesheet" href="styles/default.css" />
-        <link rel="stylesheet" href="styles/steam.css" />
+        <link rel="stylesheet" href="styles/matrix.css" />
     </head>
     <body>
-        <main class="container">
+        <main>
             % for component in components:
                 % if component["type"] == "github_section":
                     ${github_section.render(component["config"])}

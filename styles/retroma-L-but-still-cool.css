@@ -1,6 +1,4 @@
 :root {
-    /* RETROMA PALETTE */
-
     --bg: #181615;
     --bg-dark: #12100f;
 
@@ -25,10 +23,7 @@
     --font-mono: "JetBrains Mono", monospace;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
+/* BASE */
 
 body {
     background: radial-gradient(
@@ -37,8 +32,6 @@ body {
         #181615 45%,
         #12100f 100%
     );
-
-    color: var(--text);
 
     font-family: var(--font-body);
 
@@ -49,15 +42,13 @@ body {
     letter-spacing: 0.01em;
 }
 
-.container {
+main {
     max-width: 1200px;
-
-    margin: 0 auto;
 
     gap: 24px;
 }
 
-/* SHARED CARD */
+/* CARD */
 
 .card {
     background:
@@ -84,8 +75,6 @@ body {
 /* SEARCH */
 
 .search-input {
-    color: var(--text);
-
     background:
         linear-gradient(
             180deg,
@@ -99,7 +88,6 @@ body {
 
     padding: 16px 18px;
 
-    font: inherit;
     font-size: 1rem;
 
     box-shadow:
@@ -110,10 +98,6 @@ body {
         border-color 0.15s ease,
         box-shadow 0.15s ease,
         background 0.15s ease;
-}
-
-.search-input::placeholder {
-    color: var(--text-muted);
 }
 
 .search-input:focus {
@@ -132,11 +116,7 @@ body {
         inset 0 1px 0 rgba(255, 244, 214, 0.05);
 }
 
-/* TOP LINKS */
-
-.github-section {
-    gap: 14px;
-}
+/* TOP BAR */
 
 .github-section a {
     color: var(--text);
@@ -205,17 +185,9 @@ body {
     padding-bottom: 10px;
 }
 
-/* GRID */
-
-.link-grid {
-    gap: 18px;
-}
-
 /* LINK CARDS */
 
 .link-card {
-    color: var(--text);
-
     background:
         linear-gradient(
             180deg,
@@ -267,7 +239,7 @@ body {
         var(--glow);
 }
 
-/* OPTIONAL TYPOGRAPHY */
+/* TYPOGRAPHY */
 
 p,
 span,
@@ -303,12 +275,4 @@ a {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #6a563f;
-}
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-    body {
-        padding: 20px;
-    }
 }

@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 BASE_DIR = Path(__file__).parent
-CONFIG_FILE = BASE_DIR / "config.toml"
+CONFIG_FILE = BASE_DIR / ".config/config.toml"
 COMPONENT_TABLE_PATTERN = re.compile(r"^\s*\[\[\s*([A-Za-z0-9_-]+)\s*\]\]\s*(?:#.*)?$")
 SUPPORTED_COMPONENTS = {"github_section", "search_bar", "card_section"}
 

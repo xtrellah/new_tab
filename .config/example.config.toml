@@ -1,10 +1,3 @@
-# new_tab
-
-## setup
-
-requires a `.config/config.toml`:
-
-```toml
 [[github_section]]
 items = [
   ["profile", "https://github.com/{user}"],
@@ -26,12 +19,3 @@ items = [
   ["label", "https://example.com"],
   ["label", "https://example.com"],
 ]
-```
-
-copy that or just rename `.config/example.config.toml`
-
-### run
-
-```sh
-uv run server.py
-```
